@@ -1,5 +1,6 @@
 Usage : ./build/fractol mandelbrot  
 Usage : ./build/fractol julia r i
+
 "+ -" : precision
 arrow : moove
 mouse : zoom
