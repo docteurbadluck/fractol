@@ -1,5 +1,5 @@
 Usage : ./build/fractol mandelbrot  
-Usage : ./build/fractol julia <real> <imaginary>
+Usage : ./build/fractol julia r i
 
 [fractal.pdf](https://github.com/user-attachments/files/18749329/fractal.pdf)
 
