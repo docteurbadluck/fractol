@@ -1,13 +1,45 @@
-Build : make  
-Usage : ./build/fractol mandelbrot  
-Usage : ./build/fractol julia r i
+# fract-ol
 
-"+ -" : precision ;
+A fractal renderer written in C using MiniLibX. Supports the Mandelbrot set and Julia sets with real-time zoom, pan, and iteration control.
 
-arrow : moove ;
-mouse : zoom ;
+## Build
 
+```bash
+make
+```
 
-![Screenshot from 2025-02-11 12-40-21](https://github.com/user-attachments/assets/00af210f-6644-4e2d-9799-f6b0e2c9fb62)
+The binary is output to `build/fractol`.
 
-<img width="804" height="804" alt="Screenshot from 2026-05-21 12-42-29" src="https://github.com/user-attachments/assets/b51babc6-ce94-4af4-b325-e26380f2c9b7" />
+## Usage
+
+```bash
+./build/fractol mandelbrot
+./build/fractol julia <real> <imaginary>
+```
+
+**Julia examples:**
+```
+./build/fractol julia 0 0.8
+./build/fractol julia 0.37 0.1
+./build/fractol julia -0.4 -0.59
+```
+
+## Controls
+
+| Key / Input     | Action              |
+|-----------------|---------------------|
+| `+` / `-`       | Increase / decrease iteration depth |
+| Arrow keys      | Pan                 |
+| Mouse scroll    | Zoom in / out       |
+| `ESC`           | Quit                |
+
+## Screenshots
+
+![Mandelbrot](https://github.com/user-attachments/assets/00af210f-6644-4e2d-9799-f6b0e2c9fb62)
+
+<img width="804" height="804" alt="Julia set" src="https://github.com/user-attachments/assets/b51babc6-ce94-4af4-b325-e26380f2c9b7" />
+
+## Dependencies
+
+- [MiniLibX](minilibx-linux/) — lightweight X11 graphics library
+- [libft](libft/) — custom C standard library (42 school)
